@@ -58,15 +58,18 @@ const Expertise = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`text-center transition-all duration-700 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              className={`text-center transition-all duration-1000 hover:scale-110 cursor-default ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              style={{ 
+                transitionDelay: `${index * 80}ms`,
+                transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)'
+              }}
             >
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 transition-all duration-500 hover:scale-110">
                 {stat.number}
               </div>
-              <div className="text-muted-foreground">{stat.label}</div>
+              <div className="text-muted-foreground transition-colors duration-300 hover:text-foreground">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -80,14 +83,17 @@ const Expertise = () => {
             {areas.map((area, index) => (
               <div
                 key={area}
-                className={`p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-500 ${
-                  isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+                className={`p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-700 hover:scale-105 hover:shadow-lg ${
+                  isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
                 }`}
-                style={{ transitionDelay: `${400 + index * 80}ms` }}
+                style={{ 
+                  transitionDelay: `${400 + index * 60}ms`,
+                  transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)'
+                }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
-                  <span className="text-foreground">{area}</span>
+                  <div className="w-2 h-2 rounded-full bg-primary transition-transform duration-500 hover:scale-150" />
+                  <span className="text-foreground transition-colors duration-300 hover:text-primary">{area}</span>
                 </div>
               </div>
             ))}

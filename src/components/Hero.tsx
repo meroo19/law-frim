@@ -25,11 +25,11 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-400">
-            <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-500 hover:scale-110 hover:shadow-2xl">
               Schedule Consultation
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-500 group-hover:translate-x-2" />
             </Button>
-            <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
+            <Button size="lg" variant="outline" className="border-border hover:bg-secondary transition-all duration-500 hover:scale-110 hover:shadow-xl">
               Our Expertise
             </Button>
           </div>

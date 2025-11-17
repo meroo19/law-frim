@@ -63,23 +63,26 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`group relative p-8 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-500 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              className={`group relative p-8 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-700 hover:scale-105 hover:shadow-2xl ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              style={{ 
+                transitionDelay: `${index * 100}ms`,
+                transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)'
+              }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg" />
               
               <div className="relative">
-                <div className="w-14 h-14 mb-6 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="w-7 h-7 text-primary" />
+                <div className="w-14 h-14 mb-6 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-500 group-hover:scale-110">
+                  <service.icon className="w-7 h-7 text-primary transition-transform duration-500 group-hover:rotate-12" />
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-3 text-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-foreground transition-colors duration-300 group-hover:text-primary">
                   {service.title}
                 </h3>
                 
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground transition-colors duration-300">
                   {service.description}
                 </p>
               </div>
