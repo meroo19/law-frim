@@ -39,34 +39,35 @@ const Contact = () => {
         
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
-          <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Mail className="w-6 h-6 text-primary" />
+          <div className={`space-y-8 transition-all duration-1200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}
+            style={{ transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)' }}>
+            <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-500">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 transition-all duration-500 hover:bg-primary/20 hover:scale-110">
+                <Mail className="w-6 h-6 text-primary transition-transform duration-500 hover:rotate-12" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-1">Email</h3>
-                <p className="text-muted-foreground">contact@premierlegal.com</p>
+                <h3 className="text-lg font-semibold mb-1 transition-colors duration-300 hover:text-primary">Email</h3>
+                <p className="text-muted-foreground transition-colors duration-300 hover:text-foreground">contact@premierlegal.com</p>
               </div>
             </div>
             
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Phone className="w-6 h-6 text-primary" />
+            <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-500">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 transition-all duration-500 hover:bg-primary/20 hover:scale-110">
+                <Phone className="w-6 h-6 text-primary transition-transform duration-500 hover:rotate-12" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                <h3 className="text-lg font-semibold mb-1 transition-colors duration-300 hover:text-primary">Phone</h3>
+                <p className="text-muted-foreground transition-colors duration-300 hover:text-foreground">+1 (555) 123-4567</p>
               </div>
             </div>
             
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6 text-primary" />
+            <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-500">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 transition-all duration-500 hover:bg-primary/20 hover:scale-110">
+                <MapPin className="w-6 h-6 text-primary transition-transform duration-500 hover:rotate-12" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-1">Office</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-lg font-semibold mb-1 transition-colors duration-300 hover:text-primary">Office</h3>
+                <p className="text-muted-foreground transition-colors duration-300 hover:text-foreground">
                   123 Corporate Plaza, Suite 500<br />
                   New York, NY 10001
                 </p>
@@ -75,7 +76,8 @@ const Contact = () => {
           </div>
           
           {/* Contact Form */}
-          <form className={`space-y-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+          <form className={`space-y-6 transition-all duration-1200 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
+            style={{ transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)' }}>
             <div className="grid md:grid-cols-2 gap-4">
               <Input placeholder="First Name" className="bg-card border-border" />
               <Input placeholder="Last Name" className="bg-card border-border" />
@@ -90,7 +92,7 @@ const Contact = () => {
               className="bg-card border-border min-h-[150px]"
             />
             
-            <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-500 hover:scale-105 hover:shadow-xl">
               Send Message
             </Button>
           </form>

@@ -64,26 +64,29 @@ const Team = () => {
           {team.map((member, index) => (
             <div
               key={member.name}
-              className={`group transition-all duration-700 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              className={`group transition-all duration-1000 hover:scale-105 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              style={{ 
+                transitionDelay: `${index * 120}ms`,
+                transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)'
+              }}
             >
-              <div className="relative overflow-hidden rounded-lg mb-4 aspect-square">
+              <div className="relative overflow-hidden rounded-lg mb-4 aspect-square shadow-lg hover:shadow-2xl transition-shadow duration-700">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                  <p className="text-sm text-muted-foreground">{member.specialty}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex items-end p-6">
+                  <p className="text-sm text-muted-foreground transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700">{member.specialty}</p>
                 </div>
               </div>
               
-              <h3 className="text-xl font-semibold mb-1 text-foreground">
+              <h3 className="text-xl font-semibold mb-1 text-foreground transition-colors duration-300 group-hover:text-primary">
                 {member.name}
               </h3>
-              <p className="text-primary text-sm">{member.role}</p>
+              <p className="text-primary text-sm transition-all duration-300">{member.role}</p>
             </div>
           ))}
         </div>
