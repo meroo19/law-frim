@@ -92,7 +92,7 @@ const Contact = () => {
               className="bg-card border-border min-h-[150px]"
             />
             
-            <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-500 hover:scale-105 hover:shadow-xl">
+            <Button className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground transition-all duration-500 hover:scale-105 hover:shadow-xl shadow-[0_0_30px_rgba(59,130,246,0.3)]">
               Send Message
             </Button>
           </form>
