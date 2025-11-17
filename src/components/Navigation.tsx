@@ -47,7 +47,7 @@ const Navigation = () => {
                 {item.label}
               </a>
             ))}
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-500 hover:scale-110 hover:shadow-xl">
+            <Button className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground transition-all duration-500 hover:scale-110 hover:shadow-xl shadow-[0_0_20px_rgba(59,130,246,0.2)]">
               Get Started
             </Button>
           </div>
@@ -74,7 +74,7 @@ const Navigation = () => {
                 {item.label}
               </a>
             ))}
-            <Button className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button className="w-full mt-4 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground transition-all duration-500 hover:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.2)]">
               Get Started
             </Button>
           </div>
