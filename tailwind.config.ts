@@ -18,15 +18,11 @@ export default {
         sans: ['Inter', 'sans-serif'],
       },
       colors: {
-        navy: {
-          dark: "hsl(var(--navy-dark))",
-          medium: "hsl(var(--navy-medium))",
-          light: "hsl(var(--navy-light))",
-        },
-        gray: {
-          dark: "hsl(var(--gray-dark))",
-          medium: "hsl(var(--gray-medium))",
-        },
+        "navy-darker": "hsl(var(--navy-darker))",
+        "navy-deep": "hsl(var(--navy-deep))",
+        "slate-dark": "hsl(var(--slate-dark))",
+        "purple-accent": "hsl(var(--purple-accent))",
+        "cyan-accent": "hsl(var(--cyan-accent))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
